@@ -2,12 +2,14 @@ name: Build
 
 on:
   push:
-    tags:        
-      - '**'
+    branches:
+      - feat/*
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: ferreiratiago/golang-rp:latest
     steps:
       - uses: actions/checkout@v3
 
