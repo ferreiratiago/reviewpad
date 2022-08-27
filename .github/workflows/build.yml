@@ -5,6 +5,9 @@ on:
     branches:
       - feat/*
 
+env:
+  LD_LIBRARY_PATH: /usr/local/lib
+
 jobs:
   build:
     runs-on: ubuntu-latest
